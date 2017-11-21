@@ -1,0 +1,29 @@
+author: Andrew Giroux
+description: App fo testing SoftUART for Mongoose OS
+version: 0.1
+arch: esp8266 
+skeleton_version: 2017-05-18
+sources:
+  - src
+libs:
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: ../softuart
+tags:
+  - uart
+  - c
+config_schema:
+- ["debug.level", 3]
+# - ["softuart.enable", true]
+# - ["softuart.tx_gpio", 5]
+# - ["softuart.rx_gpio", 4]
+# - ["softuart.baudrate", 57600]
+
+- ["wifi.ap.enable", false]
+- ["wifi.sta.enable", true]
+
+build_vars:
+  # MGOS_ENABLE_HEAP_LOG: 1
+  # MGOS_ENABLE_CALL_TRACE: 1

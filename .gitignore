@@ -1,0 +1,9 @@
+**/build/**
+.vagrant
+*.log
+.vscode
+temp_nocommit*
+aws_*
+**/workspace/**
+**/deps/**
+*.sh
